@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand navBar" href="#">Navbar</a>
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          
+        </div> -->
+    </nav>
+    <div class="container">
+        <div class="formDiv">
+            <form>
+                <div class="form-row">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group formContent">
+                                <label for="Pname">Product name</label>
+                                <input type="text" class="form-control fields" id="Pname" aria-describedby="name"
+                                    placeholder="Product name" style="width: 100%;">
+                                <small id="PnameMsg" class="form-text"></small>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group formContent">
+                                <label for="quan">Quantity</label>
+                                <input type="text" class="form-control fields" id="quan" aria-describedby="name"
+                                    placeholder="Product name" style="width: 100%;">
+                                <small id="QuanMsg" class="form-text"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group formContent">
+                                <label for="Pdate">Production date</label>
+                                <input type="date" class="form-control fields" id="Pdate" aria-describedby="Pdate"
+                                    placeholder="Product name" style="width: 100%;">
+                                <small id="PDateMsg" class="form-text"></small>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group formContent">
+                                <label for="Exdate">Expired date</label>
+                                <input type="date" class="form-control fields" id="Exdate" aria-describedby="name"
+                                    placeholder="Product name" style="width: 100%;">
+                                <small id="exDateMsg" class="form-text"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary saveBTN" onclick="SaveData()" data-bs-toggle="modal"
+                    data-bs-target="" id="btnSave">Save</button>
+                </div>
+            </form>            
+        </div>
+
+        <div class="tableDiv">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Production date</th>
+                        <th scope="col">Expired Date</th>
+                        <th scope="col">Quantity</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody id="tableBody" class="tableBody">
+                    <!-- <div class="row">
+                        <div class="col-lg-6 col-md-6">
+
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+
+                        </div>
+                    </div> -->
+                    <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>                   -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade modalUpdate" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="Modalname">Product name</label>
+                            <input type="text" class="form-control" id="Modalname" aria-describedby="name"
+                                placeholder="Product name">
+                            <small id="PnameMsg" class="form-text"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ModalPdate">Production date</label>
+                            <input type="date" class="form-control" id="ModalPdate" aria-describedby="Pdate"
+                                placeholder="Product name">
+                            <small id="PDateMsg" class="form-text"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ModalExdate">Expired date</label>
+                            <input type="date" class="form-control" id="ModalExdate" aria-describedby="name"
+                                placeholder="Product name">
+                            <small id="exDateMsg" class="form-text"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="Modalquan">Quantity</label>
+                            <input type="text" class="form-control" id="Modalquan" aria-describedby="name"
+                                placeholder="Product name">
+                            <small id="QuanMsg" class="form-text"></small>
+                        </div>
+                        <!-- <button type="button" class="btn btn-primary" onclick="" id="btn">Save</button> -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modalClose" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary modalSave" onclick="upDateData()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  subtraction -->
+
+    <div class="modal fade modalSub" id="exampleModalCenterQuan" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="TotalQuan">Quantity</label>
+                            <input type="text" class="form-control" id="TotalQuan" aria-describedby="name"
+                                placeholder="Product name" readonly>
+                            <small id="PnameMsg" class="form-text"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="usedQuan">Used Quantity</label>
+                            <input type="text" class="form-control" id="usedQuan" aria-describedby="Pdate"
+                                placeholder="Product name">
+                            <small id="PDateMsg" class="form-text"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="remaiingQuan">Remaining quantity</label>
+                            <input type="text" class="form-control" id="remaiingQuan" aria-describedby="Pdate"
+                                placeholder="Product name" readonly>
+                            <small id="PDateMsg" class="form-text"></small>
+                        </div>
+                        <!-- <button type="button" class="btn btn-primary" onclick="" id="btn">Save</button> -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modalClose" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary modalSave" onclick="sub()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- saved and not saved message -->
+    <div id="notSaved" class="notSaved">
+        <p>
+            <span class="errorSpan">
+                Not saved
+            </span>
+            <br>
+            <span>
+                There are empty fields
+            </span>
+        </p>
+    </div>
+    <div id="Saved" class="Saved">
+        <p>
+            <span class="errorSpan">
+                Saved successfuly
+            </span>
+        </p>
+    </div>
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>

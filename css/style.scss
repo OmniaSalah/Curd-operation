@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navBar{
+    padding: 0 20px;
+}
+.container{
+    padding: 50px 0;
+
+    .formDiv{
+        
+        form{
+            .formContent{
+                margin-bottom: 20px;
+                label{
+                    margin-bottom: 5px;
+                }
+                .fields{ 
+                    outline: none;               
+                    box-shadow: none;                
+                }                
+            }
+            .saveBTN{
+                box-shadow: none;
+                padding: 7px 30px;
+            }
+        }
+    }
+
+    .tableDiv{
+        padding: 50px 0;
+
+        .table{
+            .tableBody{
+                tr{
+                    td{                        
+                        .tableBTN{
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+.modal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header{
+                .close{
+                    border: none;
+                    background-color: transparent;
+
+                    span{
+                        font-size: 30px;
+                    }
+                }
+            }
+            .modal-footer{
+                .modalClose, .modalSave{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+.modalUpdate , .modalSub{
+
+    form{
+        .form-group{
+            margin: 15px;
+        }
+    }
+}
+.notSaved{
+    // display: none;
+    z-index: 100;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 1%;
+    left: 40%;
+    background-color: gray;
+    padding: 60px 50px;
+    transform: translate(0,-200%);
+    border-radius: 10px;
+    background-color: rgb(255, 218, 218);
+    font-size: 17px;
+    .errorSpan{
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+.Saved{
+    // display: none;
+    z-index: 100;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 1%;
+    left: 40%;
+    background-color: gray;
+    padding: 50px 50px;
+    transform: translate(0,-200%);
+    border-radius: 10px;
+    background-color: rgb(223, 223, 255);
+    font-size: 17px;
+    .errorSpan{
+        font-weight: bold;
+        font-size: 18px;
+    }
+}

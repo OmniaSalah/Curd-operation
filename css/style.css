@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navBar {
+  padding: 0 20px;
+}
+
+.container {
+  padding: 50px 0;
+}
+
+.container .formDiv form .formContent {
+  margin-bottom: 20px;
+}
+
+.container .formDiv form .formContent label {
+  margin-bottom: 5px;
+}
+
+.container .formDiv form .formContent .fields {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container .formDiv form .saveBTN {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 7px 30px;
+}
+
+.container .tableDiv {
+  padding: 50px 0;
+}
+
+.container .tableDiv .table .tableBody tr td .tableBTN {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal .modal-dialog .modal-content .modal-header .close {
+  border: none;
+  background-color: transparent;
+}
+
+.modal .modal-dialog .modal-content .modal-header .close span {
+  font-size: 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .modalClose, .modal .modal-dialog .modal-content .modal-footer .modalSave {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modalUpdate form .form-group, .modalSub form .form-group {
+  margin: 15px;
+}
+
+.notSaved {
+  z-index: 100;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 1%;
+  left: 40%;
+  background-color: gray;
+  padding: 60px 50px;
+  -webkit-transform: translate(0, -200%);
+          transform: translate(0, -200%);
+  border-radius: 10px;
+  background-color: #ffdada;
+  font-size: 17px;
+}
+
+.notSaved .errorSpan {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Saved {
+  z-index: 100;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 1%;
+  left: 40%;
+  background-color: gray;
+  padding: 50px 50px;
+  -webkit-transform: translate(0, -200%);
+          transform: translate(0, -200%);
+  border-radius: 10px;
+  background-color: #dfdfff;
+  font-size: 17px;
+}
+
+.Saved .errorSpan {
+  font-weight: bold;
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */
